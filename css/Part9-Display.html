@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-9 Display</title>
+    <style>
+        .card {
+            text-align: center;
+            border: 2px solid black;
+            max-width: 200px;
+            padding: 10px;
+            display: inline-block;
+            box-shadow: 10px 10px 10px grey;
+            margin: 10px;
+            
+            /* display: none; */
+        }
+        .card .card-header p {
+            font-size: 2vw;
+        }
+        .card .card-body img {
+            max-width: 200px;
+            border: 1px solid black;
+        }
+        .card .card-footer .btn {
+            font-size: 20px;
+            margin-top: 10px;
+            background-color: green;
+            border: 2px solid black;
+            padding: 8px;
+            border-radius: 10px 10px;
+            cursor: pointer;
+            /* visibility: visible; */
+            /* visibility: hidden; */
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="none">
+        <div class="card-header">
+            <p>display: none</p>
+        </div>
+        <div class="card-body">
+            <img src="../img/iky.jpeg" alt="">
+        </div>
+        <div class="card-footer">
+            <button class="btn" onclick="none()">Remove</button>
+        </div>
+    </div>
+
+    <div class="card" id="hilang">
+        <div class="card-header">
+            <p>visibility: hidden</p>
+        </div>
+        <div class="card-body">
+            <img src="../img/iky.jpeg" alt="">
+        </div>
+        <div class="card-footer">
+            <button class="btn" onclick="hilang()">Hidden</button>
+        </div>
+    </div>
+
+    <div class="card" id="reset">
+        <div class="card-header">
+            <p>Reset</p>
+        </div>
+        <div class="card-body">
+            <img src="../img/iky.jpeg" alt="">
+        </div>
+        <div class="card-footer">
+            <button class="btn" onclick="reset()">Reset All</button>
+        </div>
+    </div>
+
+    <script>
+        function none() {
+            let x = document.getElementById("none");
+            x.style.display = "none";
+        }
+
+        function hilang() {
+            let x = document.getElementById("hilang");
+            x.style.visibility = "hidden";
+        }
+
+        function reset() {
+            let x = document.getElementById("none");
+            x.style.display = "inline-block";
+
+            let z = document.getElementById("hilang");
+            z.style.visibility = "visible";
+        }
+    </script>
+</body>
+</html>

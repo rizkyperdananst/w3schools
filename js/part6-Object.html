@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Pada Javascript</title>
+</head>
+<body>
+    <h1>Object Pada JavaScript</h1>
+    <div id="hasil"></div>
+    <div id="name"></div>
+
+    <script>
+        const mahasiswa = {
+            nama: "Rizky Perdana Nst",
+            npm: 20110138,
+            kelas: "TI-P2003",
+            jurusan: "Teknik Informatika"
+        }
+        document.getElementById("hasil").innerHTML = "Nama saya" + " " + mahasiswa.nama + ", " + "dari kelas" + " " + mahasiswa.kelas + " " + "dengan jurusan" + " " + mahasiswa.jurusan;
+
+        const person = {
+            firstName: "Rizky",
+            lastName: "Perdana",
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        document.getElementById("name").innerHTML = person.fullName();
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-31 Object Display</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo2"></div>
+
+    <script>
+
+        // 1. Menampilkan object Javascript di display  
+        const person = {
+            name: 'Rizky Perdana Nst, ',
+            age: 20 ,
+            city: ' Medan',
+            today: new Date()
+        };
+        let i = ''; 
+        for(let x in person) {
+            i += person[x];
+        }
+        document.getElementById('demo').innerHTML = i;
+
+        // 2. Menampilkan object JavaScript di display
+        const person2 = {
+            name: 'Rizky Perdana Nst',
+            age: 20,
+            city: 'Medan',
+            today: new Date()
+        };
+        const myObj = Object.values(person2);
+        console.log(...myObj);
+
+        let myString = JSON.stringify(person2);
+        console.log(myString);  
+
+    </script>
+</body>
+</html>

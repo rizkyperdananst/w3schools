@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-26 Layout</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500&family=Edu+TAS+Beginner&family=Roboto:wght@300&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            /* height: 2000px; */
+            font-family: 'Edu NSW ACT Foundation', cursive;
+            font-family: 'Edu TAS Beginner', cursive;
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Style Header */
+        header nav {
+            position: sticky;
+            top: 0;
+        }
+        header nav ul {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: green;
+        }
+        header nav ul li {
+            display: block;
+            padding: 15px 10px;
+            float: right;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 18px;
+            padding: 22px 15px;
+        }
+        header nav ul li a:hover {
+            background-color: red;
+        }
+        header nav ul li:first-child {
+            float: left;
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 22px;
+            padding-left: 40px;
+        }
+        h1, .p {
+            text-align: center;
+            margin: 10px 10px;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        header {
+            position: sticky;
+            top: 0;
+        }
+        /* Style Main */
+        main .row .leftcolumn .card {
+            padding: 4px 6px 4px 0;
+            margin: 10px;
+        }
+        main .row .leftcolumn .card .card-body p {
+            text-align: center;
+        }
+        main .leftcolumn {
+            width: 75%;
+            float: left;
+        }
+        main .leftcolumn img {
+            width: 100%;
+            height: auto;
+            padding: 4px 6px;
+            border-radius: 15px 15px;
+        }
+
+        main .rightcolumn {
+            width: 25%;
+            float: left;
+        }
+        main .rightcolumn img {
+            width: 100%;
+            height: auto;
+            padding: 4px 6px;
+            border-radius: 13px 13px;
+            margin-top: 10px;
+        }
+        main .rightcolumn p {
+            text-align: center;
+        }
+        .clear {
+            clear: both;
+        }
+        footer {
+            padding: 15px;
+            background-color: green;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        @media (max-width: 500px) {
+            main .leftcolumn, main .rightcolumn {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>My Website</h1>
+    <p class="p">Website ini sudah responsive terhadap tablet dan mobile.</p>
+    <header>
+        <nav>
+            <ul>
+                <li><span>Navbar</span></li>
+                <!-- <li><a href="#">Home</a></li> -->
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="../img-alam/alam4.jpg" alt="" width="600px" height="400px">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sed laudantium. Temporibus architecto magni eius, molestias nostrum quibusdam deserunt tempore laudantium totam consequuntur aliquid facere tenetur, ipsa deleniti repellat unde?</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <img src="../img-alam/alam4.jpg" alt="" width="600px" height="400px">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sed laudantium. Temporibus architecto magni eius, molestias nostrum quibusdam deserunt tempore laudantium totam consequuntur aliquid facere tenetur, ipsa deleniti repellat unde?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="../img-alam/alam5.jpg" alt="" width="300px" height="150px">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto hic illum asperiores ab aspernatur sequi quae? Nam tempore architecto doloribus.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <img src="../img-alam/alam5.jpg" alt="" width="300px" height="150px">
+                        <img src="../img-alam/alam5.jpg" alt="" width="300px" height="150px">
+                        <img src="../img-alam/alam5.jpg" alt="" width="300px" height="150px">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, id!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="clear"></div>
+    <footer>
+        <marquee behavior="" direction="">
+            <p>Footer</p>
+        </marquee>
+    </footer>
+</body>
+</html>

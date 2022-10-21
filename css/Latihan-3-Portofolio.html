@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="shortcut icon" href="../img/Kufi Rizky.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Lat-3.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500&family=Edu+TAS+Beginner&family=Open+Sans:wght@300;400;600&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300&display=swap');
+
+        body {
+            height: 1000px;
+            margin: 0;
+            background-color: var(--biru-gelap);
+            font-family: 'Edu NSW ACT Foundation', cursive;
+            font-family: 'Edu TAS Beginner', cursive;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: var(--white-smoke);
+        }
+
+        :root {
+            --biru-gelap: rgb(12, 12, 27);
+            --white-smoke: whitesmoke;
+            --biru-tengah: rgb(25, 25, 107);
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            padding: 10px 10px;
+        }
+        
+        nav {
+            flex: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(9, 9, 53);
+            bottom: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 10px;
+            color: var(--white-smoke);
+        }
+
+        nav a:hover {
+            border-left: 2px solid var(--white-smoke);
+            /* margin-left: 15px; */
+            border-right: 2px solid var(--white-smoke);
+        }
+
+        main {
+            flex: 80%;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Galerry</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+        </nav>
+        <main>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur odio laborum, beatae natus numquam libero ad saepe repellendus similique maiores non nihil, ratione totam, perspiciatis dolorum accusantium quod officiis dolorem commodi minus esse dolor nostrum! Doloribus porro eos iste corporis facilis temporibus, fugiat culpa molestiae nemo nobis totam officiis enim sint libero reprehenderit reiciendis perspiciatis vel magnam debitis nisi cupiditate vero. Unde dicta architecto modi porro magni sit, iste eligendi ducimus nisi dolore tempore adipisci harum placeat quo doloribus ad esse consectetur, veniam laudantium totam necessitatibus officia doloremque. Omnis hic repudiandae quas reprehenderit excepturi eum obcaecati distinctio fuga veritatis. Nesciunt.</p>
+        </main>
+    </div>
+
+</body>
+</html>

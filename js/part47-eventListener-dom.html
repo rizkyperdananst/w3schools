@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-47 DOM Event Listener</title>
+</head>
+<body>
+    <button id="myBtn">Clicl Me!</button>
+    <div id="demo"></div>
+    <input type="password" name="" id="password">
+    <div id="pass"></div>
+    <button id="showPass">Show Password</button>
+    <details>
+        <summary>
+            Click Me!
+        </summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, esse.</p>
+    </details>
+    <script>
+        document.getElementById('myBtn').addEventListener('click', date);
+        function date() {
+            document.getElementById('demo').innerHTML = new Date();
+        }
+        document.getElementById('showPass').addEventListener('click', show);
+        function show() {
+            let pass = document.getElementById('password').value;
+            document.getElementById('pass').innerHTML = pass;
+        }
+    </script>
+</body>
+</html>

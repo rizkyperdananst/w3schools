@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-57  Syntax JSON</title>
+</head>
+<body>
+    <div id="jsobject"></div>
+    <div id="jsjson"></div>
+    <div id="jsonArray"></div>
+    <div id="jsonDate"></div>
+    <div id="demo"></div>
+
+    <script>
+
+        // 1. Example JS Object
+        const person = {
+            name: 'Rizky Perdana Nst',
+            npm: 20110138,
+            kelas: 'TI-P2003',
+        } 
+        document.getElementById('jsobject').innerHTML = `Nama saya <b>${person.name}</b> dan NPM saya <b>${person.npm}</b> saya dari kelas <b>${person.kelas}</b>`;
+
+        // 2. Example JS JSON With Object
+        const txt = '{"name":"Rizky Perdana Nst", "npm": 20110138, "kelas":"TI-P2003"}'
+        const obj = JSON.parse(txt);
+        document.getElementById('jsjson').innerHTML = `Nama saya ${obj.name}, NPM : ${obj.npm}, Kelas : ${obj.kelas}`;
+
+        // 3. Example JS JSON With Array
+        const txt2 = '["Rizky", "Andri", "Kaja", "Joni"]';
+        const obj2 = JSON.parse(txt2);
+        document.getElementById('jsonArray').innerHTML = obj2[0];
+       
+        // 4. Pengecualian
+        // Tanggal parsing, Object tanggal tidak diizinkan di JSON, dan jika kita perlu menyertakan tanggal, tulisa sebagai string, dan kita dapat mengubahnya kembali menjadi object tanggal nanti:
+        const txt3 = '{"name":"Rizky Perdana Nst", "brith":"2001-12-11", "city":"Negeri Lama"}'
+        const obj3 = JSON.parse(txt3);
+        obj3.brith = new Date(obj3.brith);
+        document.getElementById('jsonDate').innerHTML = `Tanggal lahir ${obj3.name} adalah ${obj3.brith}`;
+
+    </script>
+</body>
+</html>

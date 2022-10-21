@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-26 Arrow Function</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="hello"></p>
+    <p id="demo1"></p>
+
+    <script>
+        // Tanpa kurung kurawal juga sudah termasul me return kan   
+        // arrow function pake parameter dan gak pake kurung kurawal,
+        let myFunction = (a,b) => a * b;
+        document.getElementById('demo').innerHTML = myFunction(4,5);
+
+        hello = () => {
+            return 'Hallo Rizky';
+        }
+        document.getElementById('hello').innerHTML = hello();
+
+        // Kalau yabng ini tanpa tanda kurung
+        let hello2 = "";
+
+        hello2 = val => "Hello " + val;
+
+        document.getElementById("demo1").innerHTML = hello2("Universe!");
+
+// ---------------------------------
+//         <button id="btn">Click Me!</button>
+
+// <p id="demo"></p>
+
+// let hello = "";
+
+// hello = function() {
+//   document.getElementById("demo").innerHTML += this;
+// }
+
+// //The window object calls the function:
+// window.addEventListener("load", hello);
+
+// //A button object calls the function:
+// document.getElementById("btn").addEventListener("click", hello);
+    </script>
+</body>
+</html>

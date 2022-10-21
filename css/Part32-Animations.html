@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-32 Animations</title>
+    <style>
+        .animations-1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: box;
+            animation-duration: 2s;
+        }
+        @keyframes box {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: darkblue;
+            }
+        }
+        div.animations-2 {
+            width: 100px;
+            height: 100px;
+            background-color: wheat;
+            animation-name: box2;
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+        @keyframes box2 {
+            10% {
+                background-color: red;
+            }
+            25% {
+                background-color: green;
+            }
+            75% {
+                background-color: blue;
+            }
+            100% {
+                background-color: darkblue;
+            }
+        }
+        .animation-interaction-count {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: box3; /*Nama animasinya*/
+            animation-delay: 1s; /*Waktu animasi dimulai tunggu 1s atau 1 detik dulu*/
+            position: relative; /*Position perlu*/
+            animation-duration: 4s; /*Durasi animasinya*/
+            animation-iteration-count: infinite; /*Membuat animasi berapa kali diulangi, kalau selamanya pakai value infinite*/
+            /* animation-timing-function: linear; */
+        }
+        @keyframes box3 {
+            0% {
+                background-color: red;
+                left: 0;
+                top: 0;
+            }
+            25% {
+                background-color: green;
+                left: 200px;
+                top: 0;
+            }
+            50% {
+                background-color: blue;
+                top: 200px;
+                left: 200px;
+            }
+            70% {
+                background-color: brown;
+                left: 0;
+                top: 200px;
+            }
+            100% {
+                background-color: gold;
+                top: 0;
+                left: 0;
+            }
+        }
+        .rounded {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            font-size: 50px;
+            font-weight: bold;
+            position: relative;
+            animation-name: rounded;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes rounded {
+            from {
+                background-color: brown;
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animations-1"></div><br>
+    <div class="animations-2"></div><br>
+    <div class="animation-interaction-count"></div>
+    <div class="rounded">+</div>
+</body>
+</html>

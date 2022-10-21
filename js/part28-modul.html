@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-28 Modul JS</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div class="demo2"></div>
+    
+    <script>
+        // Impor
+// Anda dapat mengimpor modul ke dalam file dengan dua cara, berdasarkan apakah modul tersebut diberi nama ekspor atau ekspor default.
+// Ekspor bernama dibangun menggunakan kurung kurawal. Ekspor default tidak.
+
+        import { name, age } from "./person.js";
+        // import message from "./message.js";
+
+        let text = 'My name is ' + name + ', I am ' + age + ' years old.';
+        document.getElementById('demo').innerHTML = text;   
+
+        // document.getElementById('demo2').innerHTML = message();
+    </script>
+</body>
+</html>

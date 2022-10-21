@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-58 StringIf JSON</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <div id="localStroge"></div>
+
+    <script>
+        // 1. JSON stringIf() With Object
+        const txt = {
+            name: 'Rizky Perdana Nst',
+            age: 20,
+            city: 'Negeri Lama'
+        }
+        const obj1 = JSON.stringify(txt);
+        document.getElementById('demo').innerHTML = obj1;
+
+        // 2. JSON stringif() With Array
+        const txt2 = ["Rizky", "Kaja", "Joni", "Andri"];
+        const obj2 = JSON.stringify(txt2);
+        document.getElementById('demo2').innerHTML = obj2;
+
+        // 3. Menyimpan Data Mengunakan LocalStroge
+        const myObj = {
+            name: 'Rizky',
+            age: 20,
+            city: 'Negeri Lama'
+        }
+        const myJSON = JSON.stringify(myObj);
+        localStorage.setItem('testJSON', myJSON);
+
+        // Retrieving Data:
+        let text = localStorage.getItem('testJSON');
+        let obj = JSON.parse(text);
+        document.getElementById('localStroge').innerHTML = obj.name;
+
+    </script>
+</body>
+</html>

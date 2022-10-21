@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan-1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(10, 10, 29);
+        }
+        .responsive {
+            width: 24.99999%;
+            float: left;
+            padding: 0 2px;
+        }
+        .responsive .card {
+            padding: 5px 2px;
+            border: 2px solid black;
+        }
+        .responsive .card .card-body a img {
+            width: 100%;
+            /* height: auto; */
+        }
+        .responsive .card .card-body p {
+            text-align: center;
+            color: wheat;
+        }
+        .responsive .card:hover {
+            outline: 1px solid saddlebrown;
+        }
+        .clear {
+            clear: both;
+        }
+        @media (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+            }
+        }
+        @media (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+
+        .parent {
+            position: relative;
+            width: 20%;
+        }
+        .parent img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+        .child {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: brown;
+            overflow: hidden;
+            height: 0;
+            transition: 1s ease;
+            text-align: center;
+            line-height: 400px;
+        }
+        .parent:hover .child {
+            bottom: 0;
+            height: 100%;
+        }
+        /* reflect image */
+        .box-reflect img {
+            -webkit-box-reflect: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive">
+        <div class="card">
+            <div class="card-body">
+                <a href="../img-alam/alam1.jpg">
+                    <img src="../img-alam/alam1.jpg" alt="" title="Tekan untuk melihat gambar lebih jelas" width="600px" height="200px">
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea obcaecati repellat architecto nobis ipsam delectus, expedita corrupti odio accusantium veritatis?</p>
+            </div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="card">
+            <div class="card-body">
+                <a href="../img-alam/alam2.jpeg">
+                    <img src="../img-alam/alam2.jpeg" alt="" title="Tekan untuk melihat gambar lebih jelas" width="600px" height="200px">
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea obcaecati repellat architecto nobis ipsam delectus, expedita corrupti odio accusantium veritatis?</p>
+            </div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="card">
+            <div class="card-body">
+                <a href="../img-alam/alam3.jpeg">
+                    <img src="../img-alam/alam3.jpeg" alt="" title="Tekan untuk melihat gambar lebih jelas" width="600px" height="200px">
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea obcaecati repellat architecto nobis ipsam delectus, expedita corrupti odio accusantium veritatis?</p>
+            </div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="card">
+            <div class="card-body">
+                <a href="../img-alam/alam4.jpg">
+                    <img src="../img-alam/alam4.jpg" alt="" title="Tekan untuk melihat gambar lebih jelas" width="600px" height="200px">
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea obcaecati repellat architecto nobis ipsam delectus, expedita corrupti odio accusantium veritatis?</p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    
+    <div class="parent">
+        <img src="../img/iky.jpeg" alt="">
+        <div class="child">
+            <div class="text" style="color: white;">I'm Front End Develover</div>
+        </div>
+    </div>
+    <div class="box-reflect">
+        <img src="../img/iky.jpeg" alt="" title="My Profile" width="200px">
+    </div>
+</body>
+</html>

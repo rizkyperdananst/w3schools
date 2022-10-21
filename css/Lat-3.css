@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --biru-gelap: rgb(12, 12, 27);
+    --white-smoke: whitesmoke;
+    --biru-tengah: rgb(25, 25, 107);
+}
+

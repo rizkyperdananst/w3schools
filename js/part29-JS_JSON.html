@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-29 JS JSON</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="day"></div>
+    <input type="text" name="" id="text">
+    <button type="button" onclick="myFunction()">Click Me</button>
+    <p id="tampil"></p>
+
+<!-- SON adalah format untuk menyimpan dan mengangkut data.
+JSON sering digunakan ketika data dikirim dari server ke halaman web.
+
+Apa itu JSON?
+JSON adalah singkatan dari Java S cript O bject N otation
+JSON adalah format pertukaran data yang ringan
+JSON tidak bergantung pada bahasa *
+JSON "mendeskripsikan diri sendiri" dan mudah dimengerti
+* Sintaks JSON diturunkan dari sintaks notasi objek JavaScript, tetapi format JSON hanya berupa teks. Kode untuk membaca dan menghasilkan data JSON dapat ditulis dalam bahasa pemrograman apa pun. -->
+
+
+    <script>
+        function myFunction() {
+            let tampil = document.getElementById('tampil');
+            let input = document.getElementById('text').value;
+            input = parseInt(input);
+            let day2;
+            if( input === 0) {
+                day2 = 'Minggu'; 
+            } else if( input === 1) {
+                day2 = 'Senin';
+            } else if( input === 2) {
+                day2 = 'Selasa';
+            } else if( input === 3) {
+                day2 = 'Rabu';
+            } else {
+                day2 = 'Tidak tau';
+            }
+            tampil.innerHTML = day2;
+        }
+        
+
+
+        // JS JSON
+        let text = '{"employees":[' +
+        '{"firstName":"John","lastName":"Doe" },' +
+        '{"firstName":"Anna","lastName":"Smith" },' +
+        '{"firstName":"Peter","lastName":"Jones" }]}';
+
+        const obj = JSON.parse(text);
+        document.getElementById("demo").innerHTML =
+        obj.employees[0].firstName + " " + obj.employees[2].lastName;
+ 
+        // Membuat Day
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = 'Sunday';
+                break;
+            case 1:
+                day = 'Monday';
+                break;
+            case 2:
+                day = 'Tuesday';
+                break;
+            case 3:
+                day = "Wendesday";
+                break
+            case 4:
+                day = 'Thursday';
+                break;
+            case 5:
+                day = 'Friday';
+                break;
+            case 6: 
+                day = 'Saturday';
+                break;  
+            default:
+                day = 'Unknown'
+                break;
+        }
+        document.getElementById('day').innerHTML = day;
+    </script>
+
+</body>
+</html>

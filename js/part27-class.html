@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-27 Class JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript Class</h1>
+    <p>How to use a JavaScript Class.</p>
+
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <div id="age"></div>
+
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        const myCar = new Car('Avanza', 2015);
+        const myCar2 = new Car('Pajero Sport', 2020);
+        document.getElementById('demo').innerHTML = myCar.name + ' ' + myCar.year;
+        document.getElementById('demo2').innerHTML = myCar2.name + ' ' + myCar2.year; 
+        document.getElementById('age').innerHTML  = 'My car is ' + myCar.age() + ' years old.';
+
+        // Atau bisa juga mengirimkan parameter
+        // class Car {
+        //     constructor(name, year) {
+        //         this.name = name;
+        //         this.year = year;
+        //     }
+        //     age(x) {
+        //         return x - this.year;
+        //     }
+        // }
+
+        // let date = new Date();
+        // let year = date.getFullYear();
+
+        // let myCar = new Car("Ford", 2014);
+        // document.getElementById("demo").innerHTML=
+        // "My car is " + myCar.age(year) + " years old.";
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-54 Timing JS</title>
+</head>
+<body>
+    <button onclick="myVar = setTimeout(display, 2000)">Click Me!</button><br>
+    <button onclick="clearTimeout(myVar)">Clear Me!</button><br><br><br>
+    <div id="time1"></div><br><br>
+    <div id="date"></div>
+    <button onclick="clearInterval(myTime)">Clear Time Now</button>
+
+    <script>
+        function display() {
+            document.getElementById('time1').innerHTML = 'Hallo Rizky!';
+        }
+
+        myTime = setInterval(tgl, 1000);
+        function tgl() {
+            const d = new Date();
+            document.getElementById('date').innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+</body>
+</html>

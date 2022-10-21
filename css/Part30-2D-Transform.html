@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-30 2D Transform</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            /* line-height: 30px; */
+            text-align: center;
+            color: antiquewhite;
+            /* word-break: break-all; */
+            background-color: brown;
+            transition: 1s;
+            display: inline-block;
+        }
+        .tranlate:hover {
+            transform: translate(50px, 50px);
+        }
+        .rotate:hover {
+            transform: rotate(360deg);
+        }
+        .scale:hover {
+            transform: scale(2,2);
+        }
+        .skew:hover {
+            transform: skew(20deg, 30deg);
+        }
+        .matrix:hover {
+            /* Parameternya adalah sebagai berikut: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */
+            transform: matrix(1, 0, 0, 1, 150, 0);
+        }
+    </style>
+</head>
+<body>
+    <ol>Dengan properti CSS <b>transform</b> Anda dapat menggunakan metode 2D berikut
+        <li>tranlate()</li>
+        <li>rotate()</li>
+        <li>scaleX()</li>
+        <li>scaleY()</li>
+        <li>scale()</li>
+        <li>skewX()</li>
+        <li>skewY()</li>
+        <li>skew()</li>
+        <li>matrix()</li>
+    </ol>
+
+    <div class="tranlate">
+        <p>tranlate() mereng ke kiri bawah atau ke kanan atas</p>
+    </div>
+    <div class="rotate">
+        <p>rotate() membuat elemen berputar sesuai deg(derajat)</p>
+    </div>
+    <div class="scale">
+        <p>transform: scale() membuat elemen membesar lebar & tinggi seperti di Zoom</p>
+    </div>
+    <div class="skew">
+        <p>skew() membuat elemen menjadi condong</p>
+    </div>
+    <div class="matrix">
+        <p>transform: matrix() membuat elemen bergeser ke kanan[bisa dimanipulasi sesuka hati]</p>
+    </div>
+</body>
+</html>

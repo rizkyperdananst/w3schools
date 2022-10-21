@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Menampilkan Pada JavaScript</title>
+</head>
+<body>
+    <div id="satu"></div>
+    <!-- Metode document.write hanya boleh digunakan untuk pengujian -->
+    <button onclick="document.write(5+5)">Lihat Hasil</button>
+    <button onclick="window.print()">Print This Page</button>
+    <script>
+        document.getElementById("satu").innerHTML = "Ini menggunakan innerHHTML";
+        document.write(5 + 5);
+        // window.alert("Bosen yaaa???");
+    </script>
+</body>
+</html>

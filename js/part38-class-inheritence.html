@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-38 Class Inherintence</title>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+        // Warisan Kelas : Menggunakan extends
+        // Untuk membuat pewarisan kelas, gunakan extends kata kunci.
+        // Kelas yang dibuat dengan pewarisan kelas mewarisi semua metode dari kelas lain:
+        // Contoh : Buat class bernama "Model" yang akan mewarisi metode dari class "Car":
+        class Car {
+            constructor(brand) {
+                this.nameCar = brand;
+            }
+            present() {
+                return 'I have a ' + this.nameCar;
+            }
+        }
+
+        class Model extends Car {
+            constructor(brand, mod) {
+                super(brand);
+                this.model = mod;
+            }
+            show() {
+                return this.present() + ', it is a ' + this.model; 
+            }
+        }
+        let myCar = new Model('Avanza', 2015);
+        console.log(myCar.show());
+        // Method super() mengacu pada class induk.
+        // Dengan memanggil super() method dalam metode constrouctor, kita memanggil metode constructor induk dan mendapatkan akses ke properti dan metode induk.
+
+        // Getter dan Setter
+        // Kelas juga memungkinkan Anda menggunakan getter dan setter.
+
+        // Menggunakan getter dan setter untuk properti Anda dapat menjadi hal yang cerdas, terutama jika Anda ingin melakukan sesuatu yang istimewa dengan nilai tersebut sebelum mengembalikannya, atau sebelum Anda menyetelnya.
+
+        // Untuk menambahkan getter dan setter di kelas, gunakan kata kunci getand .set
+
+        // Nama metode pengambil/penyetel tidak boleh sama dengan nama properti, dalam hal ini carname.
+        // Banyak programmer menggunakan karakter garis bawah _ sebelum nama properti untuk memisahkan pengambil/penyetel dari properti sebenarnya:
+
+        class Car2 {
+            constructor(brand) {
+                this._carname = brand;
+            }
+            get cnam() {
+                return this._carname;
+            }
+            set cnam(x) {
+                this._carname = x;
+            }
+        }
+
+        let myCarGetSet = new Car2("Ford");
+        console.log(myCarGetSet.cnam);
+    </script>
+</body>
+</html>

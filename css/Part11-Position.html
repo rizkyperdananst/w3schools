@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 2000px;
+        }
+        .kotak {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .satu {
+            background-color: aqua;
+        }
+        .dua {
+            background-color: blue;
+            position: absolute;
+            left: 50px;
+        }
+        .tiga {
+            background-color: brown;
+        }
+        .sticky {
+            background-color: rgba(122, 45, 44, 0.6);
+            margin-top: 20px;
+            padding: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: sticky;
+            top: 0; /*harus ada top 0 nya kalau pakai sticky, hampir sama kayak fixed*/
+        }
+    </style>
+</head>
+<body>
+    <p>Perbedaan antara Position Absolute dan Relative adalah kalau <b>relative</b> dia naik satu tingkat dimensinya yang dari dimensi awal, namun dimensi awal dia tadi tidak kosong walaupun dia sudah berpindah dimensi. Sedangkan <b>Absolute</b> dia hampir sama kayak <b>relative</b> namun disaat ia naik satu tingkat dimensi awalnya dianggap tidak ada maka dimensi dibawahnya bakalan menempati tempat dia yang awal.</p>
+    <div class="kotak satu"></div>
+    <div class="kotak dua"></div>
+    <div class="kotak tiga"></div>
+    <div class="sticky">
+        <center>ini adalah position sticky</center>
+    </div>
+</body>
+</html>

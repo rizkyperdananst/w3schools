@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-30 Definisi Object</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="myObj"></div>
+
+    <script>
+        // Ada banyak cara untuk mendefinisikan Object
+        // 1. Cara pertama
+        const person = {
+            firstName: 'Rizky Perdana',
+            lastName: ' Nasution',
+            age: 20,
+        }
+        console.log(person.firstName.concat(person.lastName));
+
+        // 2. Cara kedua
+        const person2 = {};
+        person2.firstName = 'Rizky Perdana';
+        person2.lastName = ' Nasution';
+        person2.age = 20;
+        console.log(person2.firstName.concat(person2.lastName));
+
+        // 3. Cara ketiga dengan menuliskan keyword new Object()
+        const person3 = new Object();
+        person3.firstName = 'Rizky Perdana';
+        person3.lastName = ' Nasution';
+        person3.age = 20;
+        console.log(person3.firstName.concat(person3.lastName));
+        
+        // 4. Menambahkan properti object dan menghapusnya
+        person3.status = 'Lajang';
+        console.log(person3.status);
+        delete(person3.status);
+        console.log(person3.status); // undefined karna object dengan properti status sudah di delete 
+
+        // 5. Contoh Array dan Object Bersarang
+        const myObj = {
+            name: 'Rizky Perdana Nst',
+            age: 20,
+            cars: [
+                {
+                    name: 'Ford',
+                    models: ['Fiesta', 'Focus', 'Mustang']
+                },
+                {
+                    name: 'BMW',
+                    models: ['320', 'X3', 'X5']
+                },
+                {
+                    name: 'Fiat',
+                    models: ['500', 'Panda']
+                }
+            ]
+        }
+        console.log(myObj.cars[0].name);
+        let x = '';
+        for(let i in myObj.cars) {
+            x += '<h2>' + myObj.cars[i].name + '</h2>';
+            for( let j in myObj.cars[i].models) {
+                x += myObj.cars[i].models[j] + '<br>';
+            }
+        }
+        document.getElementById('myObj').innerHTML = x;
+    </script>
+</body>
+</html>

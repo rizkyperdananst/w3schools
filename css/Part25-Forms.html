@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-25 Form</title>
+    <style>
+        input[type=text] {
+            width: 50%;
+            height:40px;
+            margin: 2px 5px;
+            border: 1px solid saddlebrown;
+            display: block;
+            transition: 1s ease-in-out;
+            font-size: 16px;
+            background-image: url(../icon/search.svg);
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            background-position: 10px 10px;
+            border-radius: 5px 5px;
+            padding: 12px 20px 12px 40px;
+        }
+        input[type=text]:focus {
+            outline: 1px solid salmon;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="first">FirstName :</label>
+        <input type="text" name="first" id="first" placeholder="First Name">
+        <label for="last">LastName :</label>
+        <input type="text" name="last" id="last"><br>
+    </form>
+</body>
+</html>

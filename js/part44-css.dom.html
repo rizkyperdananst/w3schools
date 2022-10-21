@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-44 CSS DOM</title>
+</head>
+<body>
+    <h1 id="red">Heading H1</h1>
+    <button onclick="changeColor()">Change Color</button><br>
+    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sit omnis nostrum voluptate maiores iste enim voluptatum iure minus esse.</p><br>
+    <button onclick="hide()">Hide Text</button>
+    <button onclick="show()">Show Text</button>
+
+    <script>
+        function changeColor() {
+            let color = document.getElementById('red');
+            color.style.color = 'red';
+            color.style.fontSize = '50px';
+        }
+
+        function hide() {
+            let text = document.getElementById('text');
+            text.style.display = 'none';
+        }
+        function show() {
+            let text = document.getElementById('text');
+            text.style.display = 'inline';
+        }
+    </script>
+</body>
+</html>

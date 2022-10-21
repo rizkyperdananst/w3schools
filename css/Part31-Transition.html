@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-31 Transition</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            transition: width 1s;
+            /* transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 1s; */
+        }
+        div:hover {
+            width: 300px;
+        }
+        .linear:hover {
+            transition-timing-function: linear;
+        }
+        .ease:hover {
+            transition-timing-function: ease;
+        }
+        .ease-in:hover {
+            transition-timing-function: ease-in;     
+        }
+        .ease-out:hover {
+            transition-timing-function: ease-out;
+        }
+        .ease-in-out:hover {
+            transition-delay: 1s;
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1"></div>
+    <div class="linear"><p>linear</p></div>
+    <div class="ease"><p>ease</p></div>
+    <div class="ease-in"><p>ease-in</p></div>
+    <div class="ease-out"><p>ease-out</p></div>
+    <div class="ease-in-out"><p>ease-in-out</p></div>
+</body>
+</html>

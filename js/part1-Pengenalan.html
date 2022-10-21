@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <!-- <div id="hasil"></div> -->
+    
+    <button onclick="tampilkan_nama()">Jika Anda Mengklik Ini Maka Tulisan Dibawah Akan Berubah Menjadi Nama Yang Anda Masukkan Barusan</button>
+    <h2 id="hasil">Disini Akan Muncul Nama Anda</h2>
+
+    <!-- <div id="angka"></div> -->
+    <script>
+
+        var nama = prompt("Masukkan Nama Anda");
+        function tampilkan_nama(){
+            document.getElementById("hasil").innerHTML = nama;
+        }
+
+    </script>
+</body>
+</html>

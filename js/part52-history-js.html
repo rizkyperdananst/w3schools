@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-52 History JS</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <input type="button" value="Back" onclick="goBack()"><br>
+    <input type="button" value="Forward" onclick="goForward()">
+
+    <script>
+        // Sejarah Jendela
+        // Objek window.historydapat ditulis tanpa awalan jendela.
+        // Untuk melindungi privasi pengguna, ada batasan bagaimana JavaScript dapat mengakses objek ini.
+
+        // Beberapa metode:
+        // history.back()- sama seperti mengklik kembali di browser
+        // history.forward()- sama seperti mengklik maju di browser
+
+        function goBack() {
+            window.history.back();
+        }
+        function goForWard() {
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>

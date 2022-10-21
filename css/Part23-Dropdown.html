@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-23 Dropdowns Pada CSS</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            box-shadow: 0 5px 5px 5px grey;
+            padding: 5px;
+            min-width: 100px;
+            z-index: 1;
+            overflow: auto;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            cursor: pointer;
+
+        }
+
+        .dropdown-2 {
+            position: relative;
+            display: inline-block;
+            /* float: right; */
+        }
+        .dropbtn {
+            padding: 10px 10px;
+            background-color: green;
+            /* border: 2px solid black; */
+            border: none;
+            font-size: 20px;
+        }
+        .dropdown-content-2 {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            min-width: 122px;
+        }
+        .dropdown-content-2 a {
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            padding: 10px;
+            color: black;
+            box-shadow: 5px 5px 0px 0px;
+        }
+        .dropdown-2:hover .dropdown-content-2 {
+            display: block;
+        }
+        .dropdown-2:hover .dropdown-content-2 a {
+            box-shadow: 5px 5px 5px grey;
+        }
+        .dropbtn:hover {
+            cursor: pointer;
+            background-color: rgb(64, 131, 131);
+        }
+    </style>
+</head>
+<body>
+    <h2>Penerapan Dropdowns Pada HTML & CSS</h2>
+    <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+            <p>Hello World!</p>
+        </div>
+    </div>
+
+    <h2>Contoh dropdown pakai bottom</h2>
+    <div class="dropdown-2">
+        <button class="dropbtn">Dropdowns</button>
+        <div class="dropdown-content-2">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+</body>
+</html>

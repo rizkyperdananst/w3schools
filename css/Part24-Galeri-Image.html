@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-24 Galeri Image</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        div.galerry {
+            border: 1px solid black;
+        }
+        div.galerry:hover {
+            border: 1px solid saddlebrown;
+        }
+        div.galerry img {
+            width: 100%;
+            height: auto;
+        }
+        .responsive {
+            width: 24.99999%;
+            float: left;
+            padding: 0 6px;
+        }
+        .desc {
+            text-align: center;
+            padding: 5px 4px;
+        }
+        /* Dibawah ini ialah Media Query untuk responsive */
+        @media (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 10px 0;
+            }
+        }
+        @media (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive">
+        <div class="galerry">
+            <a href="#">
+                <img src="../img/iky.jpeg" alt="" width="200px" height="200px">
+            </a>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, recusandae.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="galerry">
+            <a href="#">
+                <img src="../img/iky.jpeg" alt="" width="200px" height="200px">
+            </a>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, recusandae.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="galerry">
+            <a href="#">
+                <img src="../img/iky.jpeg" alt="" width="200px" height="200px">
+            </a>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, recusandae.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="galerry">
+            <a href="#">
+                <img src="../img/iky.jpeg" alt="" width="200px" height="200px">
+            </a>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, recusandae.</div>
+        </div>
+    </div>
+</body>
+</html>

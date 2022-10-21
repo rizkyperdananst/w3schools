@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Data Pada JavaScript</title>
+</head>
+<body>
+    <h3>Beberapa type data pada JavaScript,</h3>
+    <ul>
+        <li>Number</li>
+        <li>String</li>
+        <li>Boolean</li>
+        <li>Array</li>
+        <li>Object</li>
+    </ul>
+
+    <div id="number"></div>
+    <div id="array"></div>
+    <div id="object"></div>
+
+    <script>
+        let a = 5;
+        a += 5;
+        document.getElementById("number").innerHTML = a;
+
+        var kalimat = "Rizky Perdana Nst"; //Ini type data string
+        
+        const cars = ["Saab", "Volvo", "BMW"]; // Type data Array
+        document.getElementById("array").innerHTML = cars[2];
+        const person = {firstName:"Rizky", lastName:"Perdana", age:50, eyeColor:"blue"}; // Type data Object
+        document.getElementById("object").innerHTML = person.firstName + " " + person.lastName;
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-55 Web Form API</title>
+</head>
+<body>
+    <input id="id1" type="number" min="5" max="10" required>
+    <button onclick="myFunction()">Submit</button>
+    <div id="demo"></div>
+
+    <script>
+        function myFunction() {
+            const inpObj = document.getElementById('id1');
+            if(!inpObj.checkValidity()) {
+                alert(inpObj.validationMessage);
+            } else {
+                alert('Input OK!');
+            }
+        }
+    </script>
+</body>
+</html>

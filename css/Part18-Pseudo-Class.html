@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-18 Pseudo-Class Pada CSS</title>
+    <style>
+        button.btn {
+            color: wheat;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 15px;
+            background-color: brown;
+            font-size: 20px;
+            margin: 50px auto;
+            display: block;
+            border: 3px solid black;
+            border-radius: 5px 5px;
+            transition: 0.2s;
+        }
+        button.btn:hover {
+            background-color: chocolate;
+            cursor: pointer;
+            letter-spacing: 30px;
+        }
+        p {
+            display: none;
+        }
+        div:hover p{
+            display: block;
+            background-color: aqua;
+        }
+        .p h4:last-child {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Button</button>
+    <div>Arahkan Mouse Ke Teks Ini
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque a ab ex voluptas omnis rem doloribus repellat magni in illum vel, hic dignissimos dolores illo eveniet quis, dicta soluta? Tempore?</p>
+    </div>
+    <div class="p">
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, aperiam.</h4>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, aperiam.</h4>
+    </div>
+    <div class="p">
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, aperiam.</h4>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, aperiam.</h4>
+    </div>
+</body>
+</html>

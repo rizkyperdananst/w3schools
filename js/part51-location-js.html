@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-51 Location JS</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="hostname"></div>
+    <button onclick="newDoc()">Click to New Document</button>
+
+    <script>
+        document.getElementById('demo').innerHTML = 'Ini adalah full URL page ' + window.location.href;
+        document.getElementById('hostname').innerHTML = 'Ini adalah hostname ' + window.location.hostname;
+        function newDoc() {
+            window.location.assign('part50-screen-js.html');
+        }
+
+        // ----------------- //
+        // Lokasi Jendela
+        // Objek window.locationdapat ditulis tanpa awalan jendela.
+
+        // Beberapa contoh:
+        // window.location.hrefmengembalikan href (URL) dari halaman saat ini
+        // window.location.hostnamemengembalikan nama domain host web
+        // window.location.pathnamemengembalikan jalur dan nama file dari halaman saat ini
+        // window.location.protocolmengembalikan protokol web yang digunakan (http: atau https:)
+        // window.location.assign()memuat dokumen baru
+    </script>
+</body>
+</html>

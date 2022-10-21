@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-14 Tanggal Pada Javascript</title>
+</head>
+<body>
+    <h2>Tanggal / Date Pada Javascript</h2>
+    <button onclick="innerHTML = new Date()">Tanggal Sekarang</button>
+    <hr>
+    <p>JavaScript menghitung bulan dari 0 hingga 11.</p>
+    <p>Menentukan bulan yang lebih tinggi dari 11, tidak akan menghasilkan kesalahan tetapi menambahkan luapan ke tahun berikutnya:</p>
+    <h3>Tahun, Bulan, Hari, Jam, Menit, Detik, dan Milidetik</h3>
+    <div id="demo"></div>
+    <hr>
+    <h2>JavaScript new Date()</h2>
+    <p>Objek Date dapat dibuat dengan tanggal dan waktu yang ditentukan:</p>
+    <div id="demo2"></div>
+
+    <script>
+        const d = new Date(2020, 5, 20, 18, 03, 30, 0);
+        document.getElementById("demo").innerHTML = d;
+
+        const dt = new Date("Juni 20, 2022 18:08:00");
+        document.getElementById("demo2").innerHTML = dt;
+    </script>
+</body>
+</html>

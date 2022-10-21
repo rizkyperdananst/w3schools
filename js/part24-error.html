@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-24 Error Pada JS</title>
+</head>
+<body>
+    <!-- <input id="demo" type="number" min="5" max="10" step="1"> -->
+    <div id="demo"></div>
+    <h2>JavaScript try catch</h2>
+    <input type="text" id="text">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p1"></p>
+
+
+    <input type="text" id="pesan">
+    <button type="button" onclick="myPesan()">Click Me</button>
+    <p id="isiPesan"></p>
+
+    <script>
+        function myPesan() {
+            const isiPesan = document.getElementById('isiPesan');
+            let pesan = document.getElementById('pesan').value;
+            if(pesan == '') {
+                isiPesan.innerHTML = 'Harap mengisi dahulu!';
+            } else {
+                isiPesan.innerHTML = 'Dilarang memakai number';
+            }
+        }
+        
+
+        //  Validasi menggunakan try and throw
+        function myFunction() {
+            const message = document.getElementById('p1');
+            message.innerHTML = '';
+            let x = document.getElementById('text').value;
+            try {
+                if(x == '') throw 'empty';
+                if(isNaN(x)) throw 'not a number';
+                x = Number(x);
+                if(x < 5) throw 'too low';
+                if(x > 10) throw 'too high';
+            }
+            catch(err) {
+                    message.innerHTML = 'Input is ' + err;
+                }
+        }
+
+//  Lempar, dan Coba...Tangkap...Akhirnya
+// Pernyataan trymendefinisikan blok kode untuk dijalankan (untuk mencoba).
+// Pernyataan catchtersebut mendefinisikan blok kode untuk menangani kesalahan apa pun.
+// Pernyataan finallymendefinisikan blok kode untuk dijalankan terlepas dari hasilnya.
+// Pernyataan throwmendefinisikan kesalahan kustom.
+
+        try {
+            aalert('Welcome Rizky!');
+        }
+        catch(err){
+            document.getElementById('demo').innerHTML = err.message;
+        }
+    </script>
+</body>
+</html>

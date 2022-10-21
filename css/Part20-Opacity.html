@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-20 Opacity Pada CSS</title>
+    <style>
+        div.opacity div {
+            display: inline-block;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            line-height: 120px;
+            text-align: center;
+        }
+        .satu {
+            opacity: 0.3;
+        }
+        .dua {
+            opacity: 0.6;
+        }
+        .tiga {
+            opacity: 0.9;
+        }
+        .rgba div {
+            display: inline-block;
+        }
+        .warna {
+            width: 150px;
+            height: 150px;
+            line-height: 120px;
+            text-align: center;
+        }
+        .siji {
+            background-color: rgba(11,121,111, 0.3);
+        }
+        .loro {
+            background-color: rgba(11,121,111, 0.6);
+        }
+        .telu {
+            background-color: rgba(11,121,111, 0.9);
+        }
+
+        /* Transparan Pada Gambar */
+        div.background {
+            background: url(../img/Kufi\ Rizky.jpeg) repeat;
+            background-size: 15%;
+            border: 2px solid black;
+        }
+
+        div.transbox {
+            margin: 30px;
+            background: url(../img/Iky1.jpeg) repeat;
+            background-size: 10%;
+            border: 1px solid black;
+            opacity: 0.8;
+        }
+
+            div.transbox p {
+            margin: 5%;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p style="font-size: 25px;">Jika kita memakai properti Opacity maka teks atau anak didalamnya juga ikut transaparan</p>
+    <div class="opacity">
+        <div class="box satu">
+            <p>Opacity</p>
+        </div>
+        <div class="box dua">
+            <p>Opacity</p>
+        </div>
+        <div class="box tiga">
+            <p>Opacity</p>
+        </div>
+    </div>
+    <p>Berbeda jika kita memakai rgba pada element yang ingin kita transaparankan, maka transaparannya hanya pada warnanya saja tanpa memperngaruhi teks atau anak yang ada di dalamnya</p>
+    <div class="rgba">
+        <div class="warna siji">
+            <p>RGBA</p>
+        </div>
+        <div class="warna loro">
+            <p>RGBA</p>
+        </div>
+        <div class="warna telu">
+            <p>RGBA</p>
+        </div>
+    </div>
+
+    <div class="background">
+        <div class="transbox">
+          <p>This is some text that is placed in the transparent box.</p>
+        </div>
+      </div>
+</body>
+</html>

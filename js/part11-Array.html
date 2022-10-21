@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-11 Array</title>
+</head>
+<body>
+    <h2>Dibawah ini adalah nama-nama buah menggunakan for</h2>
+    <div id="buah"></div>
+    <h2>Dibawah ini nama nama teman menggunakan forEach</h2>
+    <div id="teman"></div>
+    <h2>Nama Mobil</h2>
+    <button onclick="addFriend()">Tambah</button>
+    <div id="cars"></div>
+
+    <script>
+        const fruits = ['Apel', 'Mangga', 'Jeruk', 'Semangka'];
+        let fruit = fruits.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < fruit; i++) {
+            text += "<li>" +  fruits[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("buah").innerHTML = text;
+
+        const friends = ['Rizky', 'Kaja', 'Joni', 'Andri', 'Andri Wibu', 'Taufan', 'David', 'Anggi'];
+        let ul = "<ul>";
+            friends.forEach(myFunction);
+            ul += "</ul>";
+        document.getElementById("teman").innerHTML = ul;
+
+        function myFunction(value) {
+            ul += "<li>" + value + "</li>";
+        }
+
+        const cars = ['Kijang Inova ', 'Avanza ', 'Fortuner ', 'Eskudo ', 'Panther '];
+        document.getElementById("cars").innerHTML = cars;
+
+        function addFriend() {
+            cars.push("Kayla");
+            document.getElementById("cars").innerHTML = cars;
+        }
+
+    </script>
+</body>
+</html>

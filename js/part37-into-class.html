@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-37 Intro Class JS</title>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+        // Intro Class Pada JavaScript
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        const myCar = new Car('Avanza ', 2010);
+        console.log(myCar.name.concat(myCar.year));
+        console.log(`Umur mobil Avanza : ${myCar.age()}`);
+        let date = new Date();
+        console.log(date);
+    </script>
+</body>
+</html>

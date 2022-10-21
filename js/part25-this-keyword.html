@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-25 This-Keyword</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="this.style.display='none'">Click to Remove Me!</button>
+    <p id="demo1"></p>
+
+    <script>
+
+        // method this
+        const person = {
+            firstName: 'Rizky Perdana',
+            lastName: 'Nst',
+            npm: 20110138,
+            fullName: function() {
+                return this.firstName + ' ' + this.lastName;
+            }
+        }
+        document.getElementById('demo').innerHTML = person.fullName();  
+
+        // method call()
+        // Contoh di bawah ini memanggil person1.fullName dengan person2 sebagai argumen, ini merujuk ke person2, bahkan jika fullName adalah metode person1:
+        const person1 = {
+            fullName: function() {
+                return this.firstName + ' ' + this.lastName; 
+            }
+        }
+        const person2 = {
+            firstName: 'Rizky Perdana',
+            lastName: 'Nst'
+        }
+        let hasil = person1.fullName.call(person2);
+        document.getElementById('demo1').innerHTML = hasil;
+
+        // method bind()
+        // Peminjaman Fungsi
+        // Dengan bind()metode, suatu objek dapat meminjam metode dari objek lain.
+        // Contoh ini membuat 2 objek (orang dan anggota).
+        // Objek anggota meminjam metode nama lengkap dari objek person:
+        const person3 = {
+            firstName:"John",
+            lastName: "Doe",
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        const member = {
+            firstName:"Hege",
+            lastName: "Nilsen",
+        }
+        let fullName = person3.fullName.bind(member);
+        document.getElementById("demo").innerHTML = fullName();
+
+    </script>
+</body>
+</html>

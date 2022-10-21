@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-39 Class Static JS</title>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+        // Method class static didefinisikan pada kelas itu sendiri
+        // Kita tidak dapat memanggil static method pada object, hanya pada class object.
+        class Car {
+            constructor(name) {
+                this.name = name;
+            }
+            static hello() {
+                return 'Hello Rizky!';
+            }
+            // 2. hello() {
+            //     return 'Hello Rizky!';
+            // }
+            // Jika memakai method static maka disaat memanggilnya ialah nama object classnya bukan variabel yang sudah menampung nama object kelas tersebut.
+        }
+        let myCar = new Car('Avanza');
+        console.log(Car.hello());
+        // 2. console.log(myCar.hello());
+
+        // Dan jika kita ingin menggunakan object myCar di dalam method static, kita dapat mengirimkannya parameter :
+        class Car2 {
+            constructor(name) {
+                this.name = name;
+            }
+            static hello(x) {
+                return `Hello ${x.name}`;
+            }
+        }
+        let myCar2 = new Car2('Avanza');
+        console.log(Car2.hello(myCar2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-12 Z-Index</title>
+    <style>
+        .kotak {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            box-sizing: border-box;
+            /* margin: 2px; */
+            text-align: center;
+            line-height: 150px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: whitesmoke;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+        }
+        .satu {
+            background-color: red;
+            position: relative;
+            z-index: 20;
+        }
+        .dua {
+            background-color: green;
+            margin-left: 70px;
+            z-index: 5;
+            margin-top: -50px;
+            position: relative;
+        }
+        .tiga {
+            background-color: blue;
+            margin-top: -50px;
+            position: relative;
+            z-index: 6;
+        }
+    </style>
+</head>
+<body>
+    <p>Syarat menggunakan z-index harus ditentukan dulu positionnya</p>
+    <div class="kotak satu">Satu</div>
+    <div class="kotak dua">Dua</div>
+    <div class="kotak tiga">Tiga</div>
+</body>
+</html>

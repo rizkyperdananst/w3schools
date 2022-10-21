@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-43 Form Validation</title>
+    
+</head>
+<body>
+    <h1>JavaScript Validation</h1>
+    <!-- Validasi Form -->
+    <form name="myForm" onsubmit="return validateForm()" action="" method="post">
+        <label for="name">Nama :</label>
+        <input type="text" name="fname" id="name"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <!-- End Validasi Form -->
+
+    <!-- Validasi Number -->
+    <input type="number" id="number">
+    <button type="button" onclick="myFunction()">Submit</button>
+    <div id="numb"></div>
+    <!-- End Validasi Number -->
+    Validasi Otomatis :
+    <input type="text" name="" id="" required><br> <!--Validasi otomatis-->
+    <!-- Atribut Input HTML Validasi Kendala
+    Attribute	Description
+    disabled	Specifies that the input element should be disabled
+    max	        Specifies the maximum value of an input element
+    min	        Specifies the minimum value of an input element
+    pattern	    Specifies the value pattern of an input element
+    required	Specifies that the input field requires an element
+    type 	    Specifies the type of an input element -->
+
+    <!-- Validasi Batasan CSS Pseudo Selectors
+    Selector	Description
+    :disabled	Selects input elements with the "disabled" attribute specified
+    :invalid	Selects input elements with invalid values
+    :optional	Selects input elements with no "required" attribute specified
+    :required	Selects input elements with the "required" attribute specified
+    :valid	    Selects input elements with valid values -->
+
+
+    <script>
+        function validateForm() {
+            let x = document.forms['myForm']['fname'].value;
+            if(x == '') {
+                alert('Inputan harus diisi!');
+                return false;
+            }
+        }
+
+        // Validasi Number
+        function myFunction() {
+            let y = document.getElementById('number').value;
+            let text;
+            if(isNaN(y) || y < 1 || y > 10) {
+                text = 'Input not valid';
+            } else {
+                text = 'Input OK!';
+            }
+            document.getElementById('numb').innerHTML = text;
+        }
+    </script>
+</body>
+</html>

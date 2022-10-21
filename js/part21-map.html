@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-12 Map</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo2"></div>
+
+    <script>
+
+        // method .get = Untuk memanggil map
+        // method .set = Untuk membuat isi dalam map
+        let text = '';
+        let map = new Map([
+            ['Apple', 500],
+            ['Banana', 600],
+            ['Jeruk', 700]
+        ]) 
+        map.set('Mangga', 1000);
+        map.delete('Mangga');
+        for (const peta of map) {
+            text += peta + '<br>';
+        }
+        document.getElementById('demo').innerHTML = map.get('Banana');
+        document.getElementById('demo2').innerHTML = text;
+        console.log(map.size);
+
+        let text2 = '';
+        map.forEach(function(key, value) {
+            text2 += key + ' = ' + value;
+        });
+        console.log
+        console.log(typeof(map));
+    </script>
+</body>
+</html>

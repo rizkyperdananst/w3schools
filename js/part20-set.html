@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set JS</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="set"></div>
+    <div id="exp"></div>
+
+    <script>
+        let buah = '';
+        const fruits = new Set(['Apel', 'Jeruk'])
+        fruits.add('Mangga');
+        for (const fruit of fruits) {
+            buah += fruit + '<br>';
+        }
+        document.getElementById('demo').innerHTML = buah;
+        
+        let setKosong = new Set();
+        const a = 'Apel';
+        const b = 'Belimbing';
+        const c = 'Ceri';
+        setKosong.add(a);
+        setKosong.add(b);
+        setKosong.add(c);
+        let text = '';
+        for (const kosong of setKosong) {
+            text += kosong + '<br>';
+        }
+        document.getElementById('set').innerHTML = text;
+
+        // Dibawah ini contoh call(pemanggilan menggunakan Function)
+        const contoh = new Set(['Rizky', 'Kaja', 'Joni', 'Andri']);
+        let text2 = '';
+        contoh.forEach(function(value) {
+            text2 += value;
+        }); 
+        document.getElementById('exp').innerHTML = text2;
+    </script>
+</body>
+</html>

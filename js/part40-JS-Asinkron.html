@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-40 JS Asinkron</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="love"></div>
+    <h1 id="love2"></h1>
+    <h1 id="setInterval"></h1>
+    <div id="file"></div>
+    
+<!-- 
+    <form action="" method="post">
+        <label for="nama">Nama :</label>
+        <input type="text" name="" id="nama" required><br>
+        <div id="demo"></div>
+        <label for="username">Username :</label>
+        <input type="email" name="" id="username" required><br>
+        <label for="">Password :</label>
+        <input type="password" name="" id="">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>Submit</button>
+    </form>
+    <hr>
+    <form action="" method="get">
+        nama : <input type="text" name="nama" value="Nurul" size="30" readonly><br/>
+        alamat : <input type="text" name="alamat" maxlength="5"></br/>
+        <input type="password" name="pass" style="padding: 10px; border-radius: 10px" placeholder="Masukkan Password Anda"><br/>
+        Jenis Kelamin : 
+            <input type="radio" name="jk" value="laki-laki" checked /> 
+                Laki - Laki
+            <input type="radio" name="jk" value="perempuan" /> 
+                Perempuan
+            <br/>
+        bahas pemograman yang dikuasai :
+            <input type="checkbox" name="web"> Web
+            <input type="checkbox" name="mobile"> MOBILE
+            <input type="checkbox" name="desk"> DESKTOP
+            <br/>
+        kota asal :
+        <select>
+            <option>Semarang</option>
+            <option>Bandung</option>
+            <option>Medan</option>
+        </select><br>
+        List :
+        <input list="browser" name="internet">
+        <datalist id="browserr">
+        <option value="chrome">
+        <option value="mozilla">
+        <option value="opera">
+        </datalist>
+        <br/>
+        pesan anda :
+        <textarea rows="10" cols="30">
+            
+        </textarea>
+        <br/>
+        <input type="submit" value="proses">
+    </form>
+    <img src="../img/iky.jpeg" title="Ini profil saya" alt="Ini Profil Saya">
+    <!-- <audio src="">MP3</audio> -->
+    <!-- <video src="" controls>
+        <source>
+    </video> -->
+
+
+
+    <script>
+        // JavaScript asinkron
+        // Contoh-contoh yang digunakan dalam bab sebelumnya, sangat disederhanakan.
+        // 1. Menggunakan setTimeout()
+        function myDisplayer(something) {
+            document.getElementById('demo').innerHTML = something;
+        // Tujuan dari contoh ini adalah untuk mendemonstrasikan sintaks fungsi panggilan balik:
+        }
+        function myCalculator(num1, num2, myCallback) {
+            let sum = num1 * num2;
+            myCallback(sum);
+        }
+        myCalculator(5, 5, myDisplayer);
+
+        // Tapi kita bisa menggunakan method setTimeout()
+        // Saat menggunakan fungsi JavaScript setTimeout(), Anda dapat menentukan fungsi panggilan balik yang akan dijalankan pada waktu habis:
+        function myFunctin() {
+            document.getElementById('love').innerHTML = 'I Love You!';
+        }
+        setTimeout(myFunctin, 1000);
+
+        // Atau bisa juga mengisi value pada parameter funtionnya
+        setTimeout(function() { myFunction("I love You !!!"); }, 3000);
+        function myFunction(value) {
+            document.getElementById("love2").innerHTML = value;
+        }
+
+        
+        // 2. Menggunakan setInterval()
+        // Saat menggunakan fungsi JavaScript setInterval(), Anda dapat menentukan fungsi panggilan balik yang akan dijalankan untuk setiap interval:
+        function time(){
+            let d = new Date();
+            document.getElementById('setInterval').innerHTML =
+            d.getHours() + ':' +
+            d.getMinutes() + ':' +
+            d.getSeconds();
+        }
+        setInterval(time, 1000);
+
+
+        // 3. Menunggu File
+        // Jika Anda membuat fungsi untuk memuat sumber daya eksternal (seperti skrip atau file), Anda tidak dapat menggunakan konten sebelum dimuat sepenuhnya.
+        // Ini adalah waktu yang tepat untuk menggunakan panggilan balik.
+        // Contoh ini memuat file HTML ( mycar.html), dan menampilkan file HTML di halaman web, setelah file dimuat penuh:
+        function myDisplayer2(some) {
+            document.getElementById('file').innerHTML = some;
+        }
+        function getFile(myCallback2) {
+            let req = new XMLHttpRequest();
+            req.open('GET', 'mycar.html');
+            req.onload = function() {
+                if(req.status == 200) {
+                    myCallback2(this.responseText);
+                } else {
+                    myCallback2('Error: ' + req.status)
+                }    
+            } 
+            req.send();
+        }
+        getFile(myDisplayer2);
+        
+    </script>
+</body>
+</html>

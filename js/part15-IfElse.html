@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-15 If Else Pada JavaScript</title>
+
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+        
+        alert("Selamat Mencoba");
+        ask = prompt("Masukkan NPM Anda")
+        const Rizky = {
+            name: "Rizky Perdana Nst",
+            npm: 20110138,
+            kelas: "TI-P2003",
+            jurusan: "Teknik Informatika"
+        }
+
+        const Kaja = {
+            name: "M. Kaja",
+            npm: 20110187,
+            kelas: "TI-P2003",
+            jurusan: "Teknik Informatika"
+        }
+        if( ask == Rizky.npm ) {
+            // document.getElementById("demo"). innerHTML = 
+            alert("Nama Kamu : " + " " + Rizky.name + ", " + Rizky.npm + ", " + Rizky.kelas + ", " + Rizky.jurusan);
+        } else {
+            alert("NPM Yang Anda Inputkan Tidak Ada");
+        }
+        
+        // name = prompt("Silahkan Masukkan Nama Kamu Dibawah Ini!!!");
+        // npm = prompt("NPM kamu juga ya!");
+        // kelas = prompt("Eh iya Kelasnya juga ya!!");
+        // state = confirm("Mau Lihat Hasil Yang Kamu Isi Nggak??");
+        // if( state == true ) {
+        //         alert("Nama Kamu" + " " + name + " " + "NPM" + " " + npm + " " + "Kelas" + " " + kelas)
+        //     } else {
+        //         alert("Yaudah Gak Papa");
+        //     }
+
+        // document.getElementById("demo").innerHTML = name; 
+    </script>
+</body>
+</html>

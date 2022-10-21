@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-41 Element DOM</title>
+</head>
+<body>
+    <h1>JavaScript HTML DOM</h1>
+    <h4>1. Menggunakan method getElementById()</h4>
+    <p id="intro">Ini adalah tag p dengan id intro</p>
+    <p>Ini contoh simpel menggunakan method <b>getElementById</b></p>
+    <p id="demo"></p>
+
+    <h4>2. Menggunakan method getElementByTagName()</h4>
+    <p>Ini adalah tag p</p>
+    <p>Ini contoh simpel menggunakan method <b>getElementByTagName</b></p>
+    <p id="demo2"></p>
+
+    <h4>3. Menggunakan method getElementByClassName()</h4>
+    <p class="intro">Hallo Rizky!</p>
+    <p class="intro">Hallo Rizky Perdana Nst!</p>
+    <p>Ini contoh simpel menggunakan method <b>getElementByClassName</b></p>
+    <p id="demo3"></p>
+
+    <h4>Menggunakan method querySelectorAll()</h4>
+    <p>Finding HTML Elements by Query Selector</p>
+    <p class="intro">Hello World!.</p>
+    <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+    <p id="demo4"></p>
+    <!-- <a href="" target=""></a> -->
+    <form id="frm1" action="/action_page.php">
+        First name: <input type="text" name="fname" value="Rizky"><br>
+        Last name: <input type="text" name="lname" value="Perdana"><br><br>
+        <input type="submit" value="Submit">
+    </form> 
+    <div id="demo5"></div>
+    <p>These are the values of each element in the form:</p>
+      
+
+    <script>
+        // 1. Cara mendapatkan element menggunakan getElementById()
+        const element = document.getElementById('intro').innerHTML;
+        document.getElementById('demo').innerHTML = 
+        'Text ini dari tag p yang memiliki id intro ' + element;
+
+        // 2. Cara mendapatkan element menggunakan getElementByTagName()
+        // Jadi disaat mengakses menggunakan getElementByTagName() kita juga harus mengisi index arraynya, dan tag p yang ingin kita ambil ini berada pada index keberapa? dan indexnya dimulai dari 0
+        const element2 = document.getElementsByTagName('p');
+        document.getElementById('demo2').innerHTML = 
+        'Ini adalah isi tag p(paragraf) index ke 3 ' + element2[3].innerHTML;
+
+        // 3. Cara mendapatkan element menguunakan getElementByClassName()
+        const element3 = document.getElementsByClassName('intro')[0].innerHTML;
+        document.getElementById('demo3').innerHTML =
+        'Ini adalah isi tag p dengan index 0 dengan class=intro ' + element3;
+
+        // 4. Cara mendapatkan element menggunakan querySelectorAll()
+        // const x = document.querySelectorAll("p.intro");
+        // document.getElementById("demo4").innerHTML = 
+        // 'The first paragraph (index 0) with class="intro" is: ' + x[1].innerHTML;
+
+        // Syntax Form
+        const x = document.forms["frm1"];
+        let text = "";
+        for (let i = 0; i < x.length ;i++) {
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo5").innerHTML = text;
+
+        
+    </script>
+</body>
+</html>

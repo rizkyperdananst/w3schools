@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-36 Function Bind()</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="bind"></div>
+
+    <script>
+        // Peminjaman Fungsi
+        // Dengan bind()metode, suatu objek dapat meminjam metode dari objek lain.
+        // Contoh di bawah ini membuat 2 objek (orang dan anggota).
+        // Objek anggota meminjam metode nama lengkap dari objek person:
+        const person = {
+            firstName:"John",
+            lastName: "Doe",
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        const member = {
+            firstName:"Rizky",
+            lastName: "Perdana",
+        }
+        let fullName = person.fullName.bind(member);
+        document.getElementById("demo").innerHTML = fullName();
+
+        // Contoh menampilkan nama pakai waktu
+        const human = {
+            firstName: 'Rizky Perdana',
+            lastName: ' Nasution',
+            display: function() {
+                let x = document.getElementById('bind');
+                x.innerHTML = this.firstName + ' ' + this.lastName;
+            }
+        }
+        let display = human.display.bind(human);
+        setTimeout(display, 1000);
+    </script>
+</body>
+</html>

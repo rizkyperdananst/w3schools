@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-33 Object Constructur</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="prototipe"></div>
+    <button onclick="window.print()">Clik Me to Print</button>
+
+    <script>
+        // Constructor function for person object
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+
+        // Create a person object
+        const myFather = new Person('Rizky Perdana', ' Nasution', '20', 'Blue');
+        document.getElementById('demo').innerHTML =
+        'My father is ' + myFather.age + '.';
+
+
+        // Part-34 Prototipe Object
+        function bio(first, last, age,) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            bio.prototype.name = function() {
+                return this.firstName + ' ' + this.lastName;
+            }
+        }
+        bio.prototype.status = 'Lajang';
+        const myBio = new bio('Rizky Perdana', ' Nasution', 20);
+        document.getElementById('prototipe').innerHTML = myBio.firstName;
+        console.log(myBio.name())
+        console.log(myBio.status);
+
+    </script>
+</body>
+</html>

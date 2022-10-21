@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-13 Sortir Array</title>
+</head>
+<body>
+    <h2>Menyortir Array Dengan Mengurutkan Abjad Dari Depan</h2>
+    <button onclick="short()">Semangka, Jambu, Apel, Pisang, Kiwi, Belimbing, Anggur</button>
+    <div id="short"></div>
+    <h2>Menyortir Array Dengan Mengurutkan Abjad Dari Belakang</h2>
+    <div id="reverse"></div>
+    <hr>
+
+    <div id="demo"></div>
+
+    <script>
+        const fruits = ['Pisang', 'Anggur', 'Apel', 'Semangka', 'Jambu', 'Kiwi', 'Belimbing'];
+        function short() {
+            fruits.sort()
+            document.getElementById("short").innerHTML = fruits;
+        }
+
+        const fruitS = ['Pisang', 'Anggur', 'Apel', 'Semangka', 'Jambu', 'Kiwi', 'Belimbing'];
+        fruitS.sort()
+        fruitS.reverse()
+        document.getElementById("reverse").innerHTML = fruitS;
+
+        // Create an Array:
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        // Change an element:
+        cars[0] = "Toyota";
+
+        // Add an element:
+        cars.push("Audi");
+
+        // Display the Array:
+        document.getElementById("demo").innerHTML = cars; 
+    </script>
+</body>
+</html>

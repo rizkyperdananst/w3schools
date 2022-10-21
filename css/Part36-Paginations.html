@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-36 Paginations</title>
+    <style>
+        .paginations {
+            display: inline-block;
+        }
+        .paginations a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            margin: 2px;
+            border: 1px solid black;
+        }
+        .paginations a:hover {
+            background-color: black;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Simple Paginations</h1>
+        <div class="paginations">
+            <a href="#"><</a>
+            <a href="#" id="satu" onclick="satu();">1</a>
+            <a href="#" id="dua" onclick="dua();">2</a>
+            <a href="#" >3</a>
+            <a href="#" >4</a>
+            <a href="#" >5</a>
+            <a href="#" >6</a>
+            <a href="#" >7</a>
+            <a href="#" >7</a>
+            <a href="#" >8</a>
+            <a href="#" >9</a>
+            <a href="#" >></a>
+        </div>
+    </center>
+    <script>
+        function satu(){
+            let satu = document.getElementById("satu");
+            satu.style.backgroundColor = "green";
+        }
+        function dua(){
+            let dua = document.getElementById("dua");
+            dua.style.backgroundColor = "green";
+        }
+    </script>
+</body>
+</html>

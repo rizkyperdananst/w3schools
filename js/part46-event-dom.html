@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-46 Event DOM</title>
+</head>
+<body>
+    <h1 onclick="this.innerHTML = 'Ooops!'">Click Me!</h1>
+    <h2 onclick="clickkMe()">Click Me Again!</h2>
+    <button id="myBtn">Try Click Me</button>
+    <div id="demo"></div>
+    Nama Kamu :
+    <input type="text" name="" id="fname" onchange="change()">
+    <div id="box" style="width: 200px; height: 200px; background-color: red; margin-top: 10px; line-height: 200px; text-align: center; color: white;">Click Me!</div>
+    <script>
+        function clickkMe() {
+            let change = document.getElementsByTagName('h2')[0];
+            change.innerHTML = 'Rizky Perdana Nst';
+        }
+
+        // 2.
+        document.getElementById('myBtn').onclick = displatDate;
+        function displatDate() {
+            document.getElementById('demo').innerHTML = new Date();
+        }
+
+        // 3. 
+        function change() {
+            const ganti = document.getElementById('fname');
+            ganti.value = ganti.value.toUpperCase();
+        }
+        document.getElementById('fname').onfocus = focus; 
+        function focus() {
+            let name = document.getElementById('fname');
+            name.style.border = '1px solid blue';
+        }
+
+        // 4.
+        document.getElementById('box').onmouseover = over;
+        function over() {
+            document.getElementById('box').innerHTML = 'Hallo Rizky';    
+        }
+        document.getElementById('box').onmouseout = out;
+        function out() {
+            document.getElementById('box').innerHTML = 'Kamu sudah mengover!';
+        }
+    </script>
+</body>
+</html>

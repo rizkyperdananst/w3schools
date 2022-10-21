@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-42 HTML DOM</title>
+</head>
+<body>
+    <h1>HTML DOM</h1>
+    <div id="ci"></div>
+    <img src="../img/iky.jpeg" id="image" width="200px" alt=""><br>
+    <button onclick="image()">Change Image</button><br>
+    
+
+    <script>
+        document.write(Date());
+        document.getElementById('ci').innerHTML = 'Change Image!';  
+        function image() {
+            document.getElementById('image').src = '../img/ikybgblack.png';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-19 Pseudo-Element Pada CSS</title>
+    <style>
+        p::first-line {
+            color: brown;
+        }
+        p::first-letter {
+            font-size: 30px;
+            color: black;
+        }
+        h1::before {
+            content: "Ini teks makai Before ";
+            color: red;
+            font-weight: normal;
+        }
+        h1::after {
+            content: " Ini teks makai After ";
+            color: red;
+            font-weight: normal;
+        }
+        ::marker { 
+            color: red;
+            font-size: 23px;
+        }   
+        ::selection {
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p class="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae ipsa repellendus ut repudiandae facilis fuga, voluptate voluptatem magnam veniam voluptates dolore harum ea. Impedit, cumque. Non, ipsa! Recusandae, at placeat, numquam quas molestiae incidunt ut odio adipisci sit quasi voluptatem ratione necessitatibus, aut nemo vero dicta velit tempora voluptas eaque. Quidem illum sunt, nam praesentium maiores nihil explicabo officiis saepe sit, laudantium reprehenderit vitae ea vero asperiores. Sunt earum at sapiente? Ipsa perspiciatis esse magnam necessitatibus molestias quod nihil aspernatur fugiat quas, facere veniam tempora minima. Veniam voluptatum saepe explicabo error magni quidem aspernatur. Impedit fuga vel saepe odit. Nobis.</p>
+    <h1>Pseudo-Class ::before</h1>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+      
+      <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+      </ol>
+
+      <h1>Select some text on this page:</h1>
+
+<p>This is a paragraph.</p>
+<div>This is some text in a div element.</div>
+</body>
+</html>

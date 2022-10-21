@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-48 Node DOM</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">Ini paragraf 1</p>
+        <p id="p2">Ini paragraf 2</p>
+    </div>
+    <div id="demo"></div>
+    <div id="div2">
+        <p id="p3">Ini Paragraf 3</p>
+        <p id="p4">Ini Paragraf 4</p>
+    </div>
+    <button onclick="remove()">Delete Element P4</button>
+        <script>
+            const para = document.createElement('p');
+            const node = document.createTextNode('Ini adalah paragraf baru');
+            para.appendChild(node);
+            const element = document.getElementById('div1');
+            element.appendChild(para);
+
+            // --------- //
+            const p = document.createElement('p');
+            const text = document.createTextNode('Ini adalah paragraf yang dibikin sebelum paragraf 3');
+            p.appendChild(text);
+            const element2 = document.getElementById('div2');
+            const p3 = document.getElementById('p3');
+            element2.insertBefore(p, p3);
+            function remove() {
+                const deleteElement = document.getElementById('p4');
+                deleteElement.remove();
+            }
+
+            // Collection DOM
+            const elementP = document.getElementsByTagName('p');
+            document.getElementById('demo').innerHTML = 'Ini adalah contoh paragrag ' + elementP[0].innerHTML + 'Dan panjang element p ada ' + elementP.length;
+        </script>
+</body>
+</html>

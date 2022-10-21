@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="set"></div>
+    <div id="map"></div>
+    <div id="ex"></div>
+
+
+    <script>
+        let text = '';
+        const fruits = ['Anggur', 'Apel', 'Jeruk'];
+        for (const buah of fruits) {
+            text += buah + '<br>';
+        }
+        document.getElementById('demo').innerHTML = text;
+        
+        let mobil = '';
+        const cars = new Set([
+            'a',
+            'b',
+            'c'
+        ]) 
+        for (const car of cars) {
+            mobil += car + '<br>';
+        }
+        document.getElementById('set').innerHTML = mobil;
+        
+        let sayur = '';
+        const mayur = new Map([
+            ['Apple', 500],
+            ['Banana', 600],
+            ['Jeruk', 'Lemon']
+        ]); 
+        for (const yur of mayur) {
+            sayur += yur + '<br>';
+        }
+        document.getElementById('map').innerHTML = sayur;
+        document.getElementById('ex').innerHTML = mayur.get('Apple');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-52 Navigator JS</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="appName"></div>
+    <div id="appCodeName"></div>
+
+    <script>
+        // Navigator Jendela
+        // Objek window.navigatordapat ditulis tanpa awalan jendela.
+
+        // Beberapa contoh:
+
+        // navigator.cookieEnabled
+        // navigator.appCodeName
+        // navigator.platform
+        // Properti cookieEnabled mengembalikan true jika cookie diaktifkan, jika tidak salah.
+        document.getElementById('demo').innerHTML = 'Navigator.cookieEnabled is ' + navigator.cookieEnabled;
+        // Properti appName memgembalikan nama aplikasi browser.
+        document.getElementById('appName').innerHTML = 'Navigator.appName is ' + navigator.appName;
+        // Properti appCodeName
+        document.getElementById('appCodeName').innerHTML = 'appCodeName is ' + navigator.appCodeName;
+    </script>
+</body>
+</html>

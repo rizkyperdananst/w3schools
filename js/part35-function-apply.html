@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-35 Function Apply()</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="call"></div>
+
+    <script>
+        const person = {
+            fullName: function(city) {
+                return this.fristName + ' ' + this.lastName + city ;
+            }
+        }
+        const perso2 = {
+            fristName: 'Rizky',
+            lastName: ' Perdana'
+        }
+        document.getElementById('demo').innerHTML = person.fullName.apply(perso2, [' Medan']);
+        // Kode diatas menggunakan apply() yang mana saat mengisi parameter functionnya harus menggunakan array, seperti kode diatas
+
+        // Dibandingkan dengan call()
+        // Sedangkan untuk call() tidak menggunakan array
+        const personCall = {
+            fullName: function(city, country) {
+                return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }
+        }
+
+        const person1 = {
+            firstName:"John",
+            lastName: "Doe"
+        }
+
+        const person2 = {
+            firstName:"Mary",
+            lastName: "Doe"
+        }
+
+        document.getElementById("call").innerHTML = personCall.fullName.call(person1, "Oslo", "Norway"); 
+    </script>
+</body>
+</html>

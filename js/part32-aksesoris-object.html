@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-32 Aksesoris Object</title>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+        // JavaScript Getter (Kata kunci get)
+        // Contoh ini menggunakan lang properti untuk get nilai language property.
+
+        const person = {
+            firstName: 'Rizky Perdana',
+            lastName: ' Nasution',
+            language: 'en',
+            get lang() {
+                return this.language;
+            }
+        };
+        console.log(person.lang);
+
+        // JavaScript Setter (Kata kunci set)
+        // Contoh ini menggunakan lang property untuk set nilai language property.
+        const person2 = {
+            firstName: 'Rizky Perdana',
+            lastName: ' Nasution',
+            language: '',
+            set lang(lang) {
+                this.language = lang;
+            }
+        };
+        person2.lang = 'en';
+        console.log(person2.language);
+
+        // Mengapa Menggunakan Getter dan Setter?
+        // Ini memberikan sintaks yang lebih sederhana
+        // Ini memungkinkan sintaks yang sama untuk properti dan metode
+        // Itu dapat mengamankan kualitas data yang lebih baik
+        // Ini berguna untuk melakukan hal-hal di belakang layar
+
+    </script>
+</body>
+</html>

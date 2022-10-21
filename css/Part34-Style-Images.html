@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-34 Style-Images</title>
+    <style>
+        a img {
+            /* width: 200px; */
+            max-width: 100%;
+            height: auto;
+        }
+        .alam img {
+            display: block;
+            margin: 10px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        /* Image */
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        .container .image {
+            display: block;
+            height: auto;
+            width: 100%;
+        }
+        .container .overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: aqua;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+        .container:hover .overlay {
+            bottom: 0;
+            height: 100%;
+        }
+        .container .overlay .teks {
+            text-align: center;
+            line-height: 400px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="../img/iky.jpeg">
+        <img src="../img/iky.jpeg" alt="Rizky" width="400px" height="300px" title="Tekan untuk melihat foto lebih jelas.">
+    </a>
+    <!-- <div class="alam">
+        <img src="../img-alam/alam4.jpg" alt="Alam" width="1200px" height="400px">
+    </div> -->
+    <div class="container">
+        <img src="../img/iky.jpeg" alt="" class="image">
+        <div class="overlay">
+            <div class="teks">I'm Front End Develover</div>
+        </div>
+    </div>
+</body>
+</html>

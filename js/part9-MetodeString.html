@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-9 Metode String</title>
+</head>
+<body>
+    <h2>Ada 3 metode untuk string mengestrak bagian dari string</h2>
+    <ul>
+        <li>slice(start, end)</li>
+        <li>substring(start, end)</li>
+        <li>substr(start, length)</li>
+    </ul>
+    <div id="slice"></div>
+    <hr>
+
+    <p>Ganti "Ganteng" dengan "Manis" dengan mengklik button dibawah ini:</p>
+
+    <button onclick="myFunction()">Ganti</button>
+
+    <p id="demo">Rizky emang Ganteng</p>
+    <hr>
+
+    <p>Dibawah ini cara membuat uppercase atau HURUF BESAR semua</p>
+    <button onclick="uppercase()" id="hurufBesar">ganti huruf besar</button>
+    <!-- <div id="hurufBesar">Huruf Besar</div> -->
+
+    <hr>
+
+    <p>Dibawah ini cara membuat lowercase atau huruf kecil semua</p>
+    <button id="hurufKecil" onclick="lowercase()">GANTI HURUF KECIL</button>
+    <hr>
+    <p>Dibawah ini adalah teknik menggabungkan 2 string</p>
+    <button onclick="gabungkan()">Gabungkan</button>
+    <li>Rizky</li>
+    <li>Perdana</li>
+    <div id="concat"></div>
+    <hr>
+
+    <p>Ini padStart() adalah salah satu method untuk string untuk membuat padding diawal:</p>
+
+    <p id="demo"></p>
+    <hr>
+
+    <p>The padStart() method pads a string with another string:</p>
+
+    <p id="padStart"></p>
+    <p id="padEnd"></p>
+
+    <script>
+        let str = "Apel, Pisang, Anggur";
+        document.getElementById("slice").innerHTML = str.slice(6, 12); // Jika kita menghilangkan parameter kedua maka batas akhirnya akan dihilangkan dan menampilkan dari parameter pertama hingga akhir
+
+        function myFunction(){
+            let text = document.getElementById("demo").innerHTML;
+            document.getElementById("demo").innerHTML = text.replace("Ganteng", "Manis");
+        }
+
+        function uppercase(){
+            let text = document.getElementById("hurufBesar").innerHTML;
+            document.getElementById("hurufBesar").innerHTML = text.toUpperCase();
+        }
+
+        function lowercase(){
+            let text = document.getElementById("hurufKecil").innerHTML;
+            document.getElementById("hurufKecil").innerHTML = text.toLowerCase();
+        }
+
+        function gabungkan(){
+            let text1 = "Rizky";
+            let text2 = "Perdana";
+            let text3 = text1.concat(" ", text2);
+            document.getElementById("concat").innerHTML = text3;
+        }
+
+        let text = "5";
+        document.getElementById("padStart").innerHTML = text.padStart(4, "x");
+
+        let text1 = 10;
+        let text2 = text1.toString();
+        document.getElementById("padEnd").innerHTML = text2.padEnd(10, "Ky");
+    </script>
+</body>
+</html>

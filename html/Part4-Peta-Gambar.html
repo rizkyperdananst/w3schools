@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-4 Peta Gambar</title>
+</head>
+<body>
+    <!-- 
+        shape="rect"- mendefinisikan daerah persegi panjang
+        shape="circle"- mendefinisikan daerah melingkar
+        shape="poly"- mendefinisikan wilayah poligonal
+        shape="default"- mendefinisikan seluruh wilayah
+     -->
+    <img src="../img/iky.jpeg" alt="My Profil" usemap="#iky" width="200px" >
+    <map name="iky">
+        <area shape="default" coords="33,122,322" href="../img/iky.jpeg" alt="Profil Rizky" onclick="Klik()">
+    </map>
+
+    <script>
+        function Klik(){
+            alert("Kamu Mengklik Gambar");
+        }
+    </script>
+</body>
+</html>

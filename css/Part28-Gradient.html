@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-28 Warna Gradient</title>
+    <style>
+        .linier1 {
+            height: 200px;
+            background-image: linear-gradient(to bottom right, red, rgb(184, 184, 144));
+        }
+        .linier2 {
+            height: 200px;
+            background-image: linear-gradient(to right, rgba(95, 32, 32, 0.6), rgba(141, 141, 60, 0.9));
+        }
+        .radial1 {
+            height: 200px;
+            background-image: radial-gradient(circle, red, green, blue);
+        }
+        .conic1 {
+            height: 200px;
+            width: 200px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: conic-gradient(red, yellow, green);
+        }
+        .conic2 {
+            width: 200px;
+            height: 200px;
+            background-image: conic-gradient(red, yellow, green, blue, black);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="linier1"></div><br>
+    <div class="linier2"></div><br>
+    <div class="radial1"></div><br>
+    <div class="conic1"></div><br>
+    <div class="conic2"></div>
+</body>
+</html>

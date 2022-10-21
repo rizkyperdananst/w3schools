@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-39 Flexbox CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        :root {
+            --blue: rgb(20, 20, 48);
+            --grey: rgb(158, 126, 126);
+        }
+        .flex-container {
+            display: flex;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            justify-content: center;
+            /* justify-content: space-around; */
+            /* space-between untuk membuah spasi antar baris */
+            /* justify-content: space-between;  */
+            background-color: var(--grey);
+        }
+        .flex-container > div {
+            background-color: var(--blue);
+            margin: 10px;
+            /* padding: 40px; */
+            width: 100px;
+            height: 75px;
+            color: var(--grey);
+        }
+        .flex-container-2 {
+            display: flex;
+            background-color: var(--grey);
+            align-items: stretch;
+        }
+        .flex-container-2 > div {
+            width: 100px;
+            flex-grow: 2;
+            height: 75px;
+            margin: 10px;
+            color: var(--grey);
+            background-color: var(--blue);
+        }
+    </style>
+</head>
+<body>
+    <h2>Properti wadah flexsibel adalah:</h2>
+    <ul>
+        <li>flex-decoration. Value = <b>[ column/column-reverse || row/row-reverse ]</b></li>
+        <li>flex-wrap. Value = <b>[ wrap(untuk membuat element fleksibel)/ nowrap(default)/ wrap-revere ]</b></li>
+        <li>flex-flow. <b>[ Properti singkatan untuk kedua flex-decoration dan flex-wrap</b> ]</li>
+        <li>flex. <b>value = 25%(Untuk besaran flex)</b></li>
+        <li>justify-content <b>[ Membuat conten bisa di start/center/end</b></li>
+        <li>align-items. <b>[ Membuat conten bisa di start/center/end ]</b></li>
+        <li>align-content. <b>[ Membuat conten bisa di start/center/end ]</b></li>
+    </ul>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <div class="flex-container-2">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-grow: 3;">3</div>
+        <div>4</div>
+        <div style="order: 1;">5</div>
+    </div>
+</body>
+</html>
